@@ -12,6 +12,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v5
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          # Optional: specify a pnpm version. If omitted, the latest version is installed.
+          # Or, it can be automatically determined from the "packageManager" field in package.json
+          version: 9
+
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
